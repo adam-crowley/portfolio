@@ -1,3 +1,17 @@
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
+// gsap.from(".header", {
+// 	duration: 0.4, y: "-70px", ease: "linear",
+// 	scrollTrigger: {
+// 		trigger: ".section--about",
+// 		markers: true,
+// 		start: "bottom 0%", //when top passes 75% viewport height
+// 		//events: onEnter onLeave onEnterBack onLeaveBack
+// 		toggleActions: "play none reverse none"
+// 		//options: play, pause, resume, reset, restart, complete, reverse,none
+// 	}
+// })
+
 //navigation
 const body = document.querySelector('body');
 const closeMobileNavIcon = document.querySelector('#close-mobile-nav-icon');
@@ -37,19 +51,19 @@ headerNavLink.forEach(link => {
 		e.preventDefault();
 		closeNav();
 		const href = e.target.getAttribute('href');
-		const offsetTop = document.querySelector(href).offsetTop;
-		const html = document.querySelector('html, body');
-		console.log(`href: ${href} offsetTop: ${offsetTop}`);
-		// $('html, body').animate({ scrollTop: offsetTop }, 400);
-		// html.animate({ scrollTop: offsetTop }, 400);
 		gsap.to(window, {duration: 0.4, scrollTo:href});
 	});
 });
 
-// headerNavLink.addEventListener('click', (e) => {
-// 	e.preventDefault();
-// 	closeNav();
-// 	const href = $(this).attr('href');
-// 	console.log(href);
-// 	$('html, body').animate({ scrollTop: $(href).offset().top }, 400);
-// });
+//close mobile nav when window is resized to desktop width
+const mediaQuery = window.matchMedia('(min-width: 768px)');
+
+function handleTabletChange(e) {
+	if (e.matches) {
+		closeNav();
+	}
+}
+
+mediaQuery.addEventListener('change', handleTabletChange);
+handleTabletChange(mediaQuery);
+

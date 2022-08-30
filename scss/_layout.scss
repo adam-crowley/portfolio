@@ -5052,6 +5052,9 @@
 	 Section
 	 ========================================================================== */  
 
+
 .section {
-	height: 3000px;
+	display: flex;
+	align-items: center;
+	scroll-snap-align: start;
 }

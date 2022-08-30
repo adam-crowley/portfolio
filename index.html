@@ -2,29 +2,38 @@
 <html class="no-js" lang="">
 
 <head>
-  <meta charset="utf-8">
-  <title></title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<title></title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,700;1,400&family=Oleo+Script&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
 
 </head>
 
 <body>
 
 	<header class="header">
-		<div class="container">
+		<div class="container-fluid">
 			<div class="row justify-content-center">
-				<div class="col-12 col-sm-8">
-					<nav>
-						<ul class="header__mobile-nav" id="mobile-nav">
-							<li class="header__nav-li"><a href="#about" class="header__nav-link">About</a></li>
-							<li class="header__nav-li"><a href="#skills" class="header__nav-link">Skills</a></li>
-							<li class="header__nav-li"><a href="#experience" class="header__nav-link">Experience</a></li>
-						</ul>
-					</nav>
+				<div class="col-12 d-flex">
+					<p class="header__title">Adam Crowley</p>
+					<ul class="header__nav">
+						<li class="header__nav-item"><a href="#about" class="header__nav-link">About</a></li>
+						<li class="header__nav-item"><a href="#skills" class="header__nav-link">Skills</a></li>
+						<li class="header__nav-item"><a href="#work" class="header__nav-link">Work</a></li>
+						<li class="header__nav-item"><a href="#experience" class="header__nav-link">Experience</a></li>
+					</ul>
+					<ul class="header__mobile-nav" id="mobile-nav">
+						<li class="header__nav-li"><a href="#about" class="header__nav-link">About</a></li>
+						<li class="header__nav-li"><a href="#skills" class="header__nav-link">Skills</a></li>
+						<li class="header__nav-li"><a href="#work" class="header__nav-link">Work</a></li>
+						<li class="header__nav-li"><a href="#experience" class="header__nav-link">Experience</a></li>
+					</ul>
 					<button class="header__open-mobile-nav" id="open-mobile-nav">
 						<svg class="header__open-mobile-nav-icon is-visible" id="open-mobile-nav-icon" width="24" height="20" viewBox="0 0 24 20">
 							<path d="M24,4H0V0H24Zm0,4H0v4H24Zm0,8H0v4H24Z" fill="#f28503"/>
@@ -38,83 +47,141 @@
 		</div>
 	</header>
 
-  	<section data-section="about" class="section section--about" id="about">
-		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-11 col-md-10">
-					<h1>Adam Crowley</h1>
-					<p>HTML Developer</p>
-					<h2>About</h2>
-					<div></div>
-					<div class="row">
-						<div class="col-12 col-lg-4 order-2 order-lg-1">
-							<ul>
-								<li><a href="mailto:adamcrowley@gmail.com">adamcrowley@gmail.com</a></li>
-								<li>021 266 0301</li>
-								<li><a href="" target="_blank">LinkedIn</a></li>
-							</ul>
-						</div>
-						<div class="col-12 col-lg-8 order-1 order-lg-2">
-							<p class="section--about__p">Experienced HTML Developer with design/layout sensibility and experience working in the marketing and advertising industry. Skilled in HTML, CSS, Javascript and Adobe Creative Suite.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+	<div class="section-container">
 
-	<section data-section="skills" class="section section--skills" id="skills">
-		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-11 col-md-10">
-					<h2>Skills</h2>
-					<div></div>
-					<div class="row">
-						<div class="col-12 col-lg-4 order-2 order-lg-1">
-							<ul>
-								<li><a href="mailto:adamcrowley@gmail.com">adamcrowley@gmail.com</a></li>
-								<li>021 266 0301</li>
-								<li><a href="" target="_blank">LinkedIn</a></li>
-							</ul>
+		<section data-section="about" class="section section--about" id="about">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-11 col-md-10">
+						<div class="section--about__name-container">
+							<h1 class="section--about__name">Adam Crowley</h1>
+							<p class="section--about__title">HTML & CSS Developer</p>
+							<h2 class="d-none">About</h2>
 						</div>
-						<div class="col-12 col-lg-8 order-1 order-lg-2">
-							<p class="section--about__p">Experienced HTML Developer with design/layout sensibility and experience working in the marketing and advertising industry. Skilled in HTML, CSS, Javascript and Adobe Creative Suite.</p>
+						<div class="section--about__border"></div>
+						<div class="row">
+							<div class="col-12">
+								<p class="section--about__p">Experienced HTML & CSS Developer with design/layout sensibility and experience working in the marketing and advertising industry.</p>
+								<p class="section--about__p">Skilled in HTML, CSS, HTML Email, Javascript, Wordpress, Shopify and Adobe Creative Suite.</p>
+							</div>
+							<div class="col-12">
+								<ul class="section--about__contact-list">
+									<li class="section--about__contact-item">
+										<a href="mailto:adamcrowley@gmail.com" class="section--about__contact-link">adamcrowley@gmail.com</a>
+									</li>
+									<li class="section--about__contact-item"><a href="tel:0212660301" class="section--about__contact-link">021 266 0301</a></li>
+									<li class="section--about__contact-item"><a href="https://www.linkedin.com/in/adcrowley/" target="_blank" class="section--about__contact-link">LinkedIn</a></li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</section>
+		</section>
 
-	<section data-section="experience" class="section section--experience" id="experience">
-		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-11 col-md-10">
-					<h1>Adam Crowley</h1>
-					<p>HTML Developer</p>
-					<h2>About</h2>
-					<div></div>
-					<div class="row">
-						<div class="col-12 col-lg-4 order-2 order-lg-1">
-							<ul>
-								<li><a href="mailto:adamcrowley@gmail.com">adamcrowley@gmail.com</a></li>
-								<li>021 266 0301</li>
-								<li><a href="" target="_blank">LinkedIn</a></li>
-							</ul>
-						</div>
-						<div class="col-12 col-lg-8 order-1 order-lg-2">
-							<p class="section--about__p">Experienced HTML Developer with design/layout sensibility and experience working in the marketing and advertising industry. Skilled in HTML, CSS, Javascript and Adobe Creative Suite.</p>
+		<section data-section="skills" class="section section--skills" id="skills">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-12 col-md-10">
+						<h2 class="section--skills__h2">Skills</h2>
+						<div class="section--skills__border"></div>
+					</div>
+				</div>
+				<div class="row justify-content-center">
+					<div class="col-12 col-md-10">
+						<div class="section--skills__box-container">
+							<div class="section--skills__box">
+								<h3 class="section--skills__h3">HTML</h2>
+								<p class="section--skills__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus.</p>
+							</div>
+							<div class="section--skills__box">
+								<h3 class="section--skills__h3">CSS / SASS</h2>
+								<p class="section--skills__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus.</p>
+							</div>
+							<div class="section--skills__box">
+								<h3 class="section--skills__h3">HTML Email</h2>
+								<p class="section--skills__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus.</p>
+							</div>
+							<div class="section--skills__box">
+								<h3 class="section--skills__h3">Javascript / jQuery</h2>
+								<p class="section--skills__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus.</p>
+							</div>
+							<div class="section--skills__box">
+								<h3 class="section--skills__h3">Wordpress</h2>
+								<p class="section--skills__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus.</p>
+							</div>
+							<div class="section--skills__box">
+								<h3 class="section--skills__h3">Shopify</h2>
+								<p class="section--skills__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus.</p>
+							</div>
+							<div class="section--skills__box">
+								<h3 class="section--skills__h3">Greensock Animation Platform</h2>
+								<p class="section--skills__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus.</p>
+							</div>
+							<div class="section--skills__box">
+								<h3 class="section--skills__h3">Adobe Creative Suite</h2>
+								<p class="section--skills__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus.</p>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</section>
+		</section>
+
+		<section data-section="work" class="section section--work" id="work">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-11 col-md-10">
+						<h2>Work</h2>
+						<div class="section--work__border"></div>
+						<div class="section--work__project">
+							<div class="row">
+								<div class="col-12 col-md-8">
+									<img src="https://picsum.photos/seed/picsum/733/452" alt="" class="section--work__img">
+								</div>
+								<div class="col-12 col-md-4 section--work__text-container">
+									<h3 class="section--work__h3">Title</h3>
+									<p class="section--work__p">Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+									<a href="" class="section--work__a">View site</a>
+								</div>
+							</div>
+						</div>
+						<div class="section--work__project">
+							<div class="row">
+								<div class="col-12 col-md-4 section--work__text-container">
+									<h3 class="section--work__h3">Title</h3>
+									<p class="section--work__p">Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+									<a href="" class="section--work__a">View site</a>
+								</div>
+								<div class="col-12 col-md-8">
+									<img src="https://picsum.photos/seed/picsum/733/452" alt="" class="section--work__img">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</section>
+
+		<section data-section="experience" class="section section--experience" id="experience">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-11 col-md-10">
+						<h2>Experience</h2>
+						<div class="section--experience__border"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</div>
 
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   	<script>window.jQuery || document.write('<script src="js/jquery-3.4.1.min.js"><\/script>')</script>
-	  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.2/gsap.min.js"></script>
-	  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.2/ScrollToPlugin.min.js"></script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js"></script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollToPlugin.min.js"></script>
 	<script src="js/main.js"></script>
 
 </body>
