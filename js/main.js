@@ -1,10 +1,10 @@
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
-// gsap.from(".header", {
-// 	duration: 0.4, y: "-70px", ease: "linear",
+// gsap.to(".header__title", {
+// 	duration: 0.2, autoAlpha: 1, ease: "linear",
 // 	scrollTrigger: {
 // 		trigger: ".section--about",
-// 		markers: true,
+// 		// markers: true,
 // 		start: "bottom 0%", //when top passes 75% viewport height
 // 		//events: onEnter onLeave onEnterBack onLeaveBack
 // 		toggleActions: "play none reverse none"
@@ -18,7 +18,7 @@ const closeMobileNavIcon = document.querySelector('#close-mobile-nav-icon');
 const openMobileNavIcon = document.querySelector('#open-mobile-nav-icon');
 const mobileNav = document.querySelector('#mobile-nav');
 const mobileNavBtn = document.querySelector('#open-mobile-nav');
-const headerNavLink = document.querySelectorAll('.header__nav-link');
+const headerNavLink = document.querySelectorAll('.header__nav-link, .header__mob-nav-link');
 
 function openNav() {
 	body.classList.add('body--mobile-nav-open');
