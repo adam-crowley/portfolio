@@ -5425,12 +5425,21 @@ body.body--mobile-nav-open {
   padding: 0 0.75rem;
 }
 
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 -0.75rem;
+}
+
 .header__title {
   font-family: "Oleo Script", cursive;
   font-weight: 400;
   font-size: 1.875rem;
   /* 30px */
+  line-height: 50px;
   color: #0A1931;
+  z-index: 2;
 }
 
 .header__nav {
@@ -5474,9 +5483,10 @@ body.body--mobile-nav-open {
   display: inline-block;
   font-family: "DM Sans", sans-serif;
   font-weight: 400;
-  font-size: 1rem;
-  /* 16px */
+  font-size: 1.5rem;
+  /* 24px */
   color: #0A1931;
+  padding: 0.5rem 0;
 }
 .header__nav-link:hover {
   color: #185ADB;
@@ -5491,7 +5501,7 @@ body.body--mobile-nav-open {
   opacity: 0;
   bottom: -0.25rem;
 }
-@media (min-width: 576px) {
+@media (min-width: 768px) {
   .header__nav-link {
     font-size: 1.125rem;
     /* 18px */
@@ -5507,12 +5517,10 @@ body.body--mobile-nav-open {
   position: relative;
   z-index: 1;
   background-color: transparent;
-  width: 46px;
+  width: 36px;
   height: 46px;
   border: 0;
   outline: 0;
-  margin-top: 15px;
-  border-radius: 6px;
 }
 @media (min-width: 768px) {
   .header__open-mobile-nav {
@@ -5527,11 +5535,19 @@ body.body--mobile-nav-open {
   display: inline-block;
 }
 
+.header__open-mobile-nav-path {
+  fill: #0A1931;
+}
+
 .header__close-mobile-nav-icon {
   display: none;
 }
 .header__close-mobile-nav-icon.is-visible {
   display: inline-block;
+}
+
+.header__close-mobile-nav-polygon {
+  fill: #0A1931;
 }
 
 .header__mobile-nav {
@@ -5548,7 +5564,7 @@ body.body--mobile-nav-open {
   margin: 0;
   padding: 0;
   padding-top: 103px;
-  background-color: #0e424d;
+  background-color: #FFC947;
   z-index: 1;
 }
 .header__mobile-nav.is-visible {

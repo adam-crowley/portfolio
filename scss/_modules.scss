@@ -23,11 +23,20 @@ body {
 	padding: 0 0.75rem;
 }
 
+.header__container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 -0.75rem;
+}
+
 .header__title {
 	font-family: 'Oleo Script', cursive;
 	font-weight: 400;
 	font-size: 1.875rem; /* 30px */
+	line-height: 50px;
 	color: #0A1931;
+	z-index: 2;
 }
 
 .header__nav {
@@ -63,8 +72,9 @@ body {
 	display: inline-block;
 	font-family: 'DM Sans', sans-serif;
 	font-weight: 400;
-	font-size: 1rem; /* 16px */
+	font-size: 1.5rem; /* 24px */
 	color: #0A1931;
+	padding: 0.5rem 0;
 	&:hover {
 		color: #185ADB;
 	}
@@ -79,9 +89,10 @@ body {
 		bottom: -0.25rem;
 	}	
 	@media (min-width: 576px) {
-		font-size: 1.125rem; /* 18px */
+		
 	}
 	@media (min-width: 768px) {
+		font-size: 1.125rem; /* 18px */
 	}
 	@media (min-width: 992px) {
 	}
@@ -101,12 +112,10 @@ body {
 	position: relative;
 	z-index: 1;
 	background-color: transparent;
-	width: 46px;
+	width: 36px;
 	height: 46px;
 	border: 0;
 	outline: 0;
-	margin-top: 15px;
-	border-radius: 6px;
 	@media (min-width: 768px) {
 		display: none;
 	}
@@ -119,11 +128,19 @@ body {
 	}
 }
 
+.header__open-mobile-nav-path {
+	fill: #0A1931;
+}
+
 .header__close-mobile-nav-icon {
 	display: none;
 	&.is-visible {
 		display: inline-block;
 	}
+}
+
+.header__close-mobile-nav-polygon {
+	fill: #0A1931;
 }
 
 .header__mobile-nav {
@@ -140,7 +157,7 @@ body {
 	margin: 0;
 	padding: 0;
 	padding-top: 103px;
-	background-color: #0e424d;
+	background-color: #FFC947;
 	z-index: 1;
 	&.is-visible {
 		visibility: visible;
