@@ -5398,7 +5398,7 @@ a:hover {
 .section {
   display: flex;
   align-items: center;
-  scroll-snap-align: start;
+  flex-direction: column;
 }
 
 /* ==========================================================================
@@ -5619,7 +5619,7 @@ body.body--mobile-nav-open {
 }
 
 .section--about__contact-link:hover {
-  color: #185ADB;
+  color: #FFC947;
 }
 
 /* ==========================================================================
@@ -5663,8 +5663,13 @@ body.body--mobile-nav-open {
 	Work Section
 	========================================================================== */
 .section--work {
-  background-color: #0A1931;
+  background-color: #FFC947;
+  background-color: #eee;
   padding: 10rem 0;
+}
+
+.section--work__header {
+  color: #0A1931;
 }
 
 .section--work__border {
@@ -5676,8 +5681,26 @@ body.body--mobile-nav-open {
 .section--work__project {
   margin-bottom: 8rem;
 }
+.section--work__project:last-child {
+  margin-bottom: 0;
+}
+
+.section--work__img-container {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 63%;
+}
+
+.section--work__img-container--th {
+  padding-bottom: 55%;
+}
+
+.section--work__img-container--sb {
+  padding-bottom: 55%;
+}
 
 .section--work__img {
+  position: absolute;
   max-width: 100%;
 }
 
@@ -5690,17 +5713,36 @@ body.body--mobile-nav-open {
 }
 
 .section--work__h3 {
+  color: #0A1931;
   margin-bottom: 2rem;
 }
 
 .section--work__p {
   font-size: 1rem;
   /* 16px */
-  color: rgba(255, 255, 255, 0.6);
-  margin: 0 auto;
+  color: #0A1931;
+  opacity: 0.6;
+  margin-bottom: 1rem;
 }
 @media (min-width: 768px) {
   .section--work__p {
+    font-size: 1.125rem;
+    /* 18px */
+  }
+}
+.section--work__a {
+  font-size: 1rem;
+  /* 16px */
+  color: #0A1931;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+  margin: 0 auto;
+}
+.section--work__a:hover {
+  color: #185ADB;
+}
+@media (min-width: 768px) {
+  .section--work__a {
     font-size: 1.125rem;
     /* 18px */
   }
@@ -5709,14 +5751,64 @@ body.body--mobile-nav-open {
 	Experience Section
 	========================================================================== */
 .section--experience {
-  background-color: #185ADB;
-  padding: 20rem 0;
+  background-color: #0A1931;
+  padding: 10rem 0 7rem;
 }
 
 .section--experience__border {
   height: 2px;
   background-color: rgba(255, 255, 255, 0.6);
   margin-bottom: 4rem;
+}
+
+.section--experience__box-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.section--experience__box {
+  flex-basis: 50%;
+  padding-bottom: 3rem;
+  padding-right: 3rem;
+}
+
+.section--experience__date {
+  font-size: 1rem;
+  /* 16px */
+  font-style: italic;
+  margin: 0 auto 0.5rem;
+}
+
+.section--experience__co {
+  font-size: 1.3125rem;
+  /* 21px */
+  font-weight: 700;
+  margin: 0 auto 0.3rem;
+}
+
+.section--experience__title {
+  font-size: 1rem;
+  /* 16px */
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0 auto 1.5rem;
+  text-transform: uppercase;
+}
+
+.section--experience__p {
+  font-size: 1.125rem;
+  /* 18px */
+  margin: 0 auto 3rem;
+}
+@media (min-width: 768px) {
+  .section--experience__p {
+    font-size: 1.125rem;
+    /* 18px */
+  }
+}
+@media (min-width: 992px) {
+  .section--experience__p {
+    margin: 0 2rem 3rem 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

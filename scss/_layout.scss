@@ -5056,5 +5056,5 @@
 .section {
 	display: flex;
 	align-items: center;
-	scroll-snap-align: start;
+	flex-direction: column;
 }
