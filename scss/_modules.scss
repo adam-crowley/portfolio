@@ -284,7 +284,7 @@ body {
 	.section--skills {
 		background-color: #185ADB;
 		// padding: 10rem 0 7rem;
-		padding: 5rem 0;
+		padding: 5rem 0 2rem;
 		@media (min-width: 768px) {
 			// padding: 15rem 0 12rem;
 		}
@@ -328,7 +328,6 @@ body {
 		@media (min-width: 576px) {
 		}
 		@media (min-width: 768px) {
-			
 		}
 		@media (min-width: 992px) {
 			font-size: 1.125rem; /* 18px */
@@ -342,11 +341,15 @@ body {
 	========================================================================== */
 
 	.section--work {
-		background-color: #FFC947;
-		// background-color: #fff;
 		background-color: #eee;
-		// background-color: #0A1931;
-		padding: 10rem 0;
+		overflow-x: hidden;
+		padding: 5rem 0 5rem;
+		@media (min-width: 768px) {
+			// padding: 15rem 0 12rem;
+		}
+		@media (min-width: 992px) {
+			padding: 10rem 0 7rem;
+		}
 	}	
 
 	.section--work__header {
@@ -356,13 +359,19 @@ body {
 	.section--work__border {
 		height: 2px;
 		background-color: #FFC947;
-		margin-bottom: 4rem;
+		margin-bottom: 2rem;
+		@media (min-width: 768px) {
+			margin-bottom: 4rem;
+		}
 	}	
 
 	.section--work__project {
-		margin-bottom: 8rem;
+		margin-bottom: 5rem;
 		&:last-child {
 			margin-bottom: 0;
+		}
+		@media (min-width: 768px) {
+			margin-bottom: 8rem;
 		}
 	}
 
@@ -370,6 +379,14 @@ body {
 		position: relative;
 		overflow: hidden;
 		padding-bottom: 63%;
+		margin-left: -0.75rem;
+		margin-right: -0.75rem;
+		margin-bottom: 2rem;
+		@media (min-width: 992px) {
+			margin-bottom: 0;
+			margin-left: auto;
+			margin-right: auto;
+		}
 	}
 
 	.section--work__img-container--th {
@@ -380,17 +397,27 @@ body {
 		padding-bottom: 55%;
 	}
 
+	.section--work__img-container--qcard {
+		padding-bottom: 57%;
+	}
+
 	.section--work__img {
 		position: absolute;
 		max-width: 100%;
+	}
+
+	.section--work__img--qcard {
+		margin-top: -43%;
 	}
 
 	.section--work__text-container {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		padding-left: 2rem;
-		padding-right: 2rem;
+		@media (min-width: 768px) {
+			padding-left: 2rem;
+			padding-right: 2rem;
+		}
 	}
 
 	.section--work__text-container--left {
