@@ -5484,7 +5484,7 @@ body.body--mobile-nav-open {
 }
 @media (min-width: 768px) {
   .header__nav-item {
-    padding-left: 2rem;
+    padding-left: 3rem;
   }
 }
 .header__nav-link {
@@ -5781,6 +5781,12 @@ body.body--mobile-nav-open {
   }
 }
 
+@media (min-width: 992px) {
+  .section--work__project-container {
+    width: 100%;
+  }
+}
+
 .section--work__project {
   margin-bottom: 5rem;
 }
@@ -5801,11 +5807,15 @@ body.body--mobile-nav-open {
   margin-right: -0.75rem;
   margin-bottom: 2rem;
 }
+@media (min-width: 768px) {
+  .section--work__img-container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 @media (min-width: 992px) {
   .section--work__img-container {
     margin-bottom: 0;
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 
@@ -5839,6 +5849,24 @@ body.body--mobile-nav-open {
   .section--work__text-container {
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+}
+
+.section--work__text-container--left {
+  padding-left: 2.75rem;
+}
+@media (max-width: 767px) {
+  .section--work__text-container--left {
+    padding-left: 0.75rem;
+  }
+}
+
+.section--work__text-container--right {
+  padding-right: 2.75rem;
+}
+@media (max-width: 767px) {
+  .section--work__text-container--right {
+    padding-right: 0.75rem;
   }
 }
 
@@ -5879,6 +5907,51 @@ body.body--mobile-nav-open {
     /* 18px */
   }
 }
+@media (min-width: 992px) {
+  .section--work__p {
+    font-size: 1rem;
+    /* 16px */
+  }
+}
+@media (min-width: 1200px) {
+  .section--work__p {
+    font-size: 1.125rem;
+    /* 18px */
+  }
+}
+
+.section--work__list {
+  margin-bottom: 2rem;
+}
+
+.section--work__list li {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  /* 16px */
+  color: #0A1931;
+  opacity: 0.6;
+  margin: 0 auto 0.75rem;
+}
+@media (min-width: 768px) {
+  .section--work__list li {
+    font-size: 1.125rem;
+    /* 18px */
+  }
+}
+@media (min-width: 992px) {
+  .section--work__list li {
+    font-size: 1rem;
+    /* 16px */
+  }
+}
+@media (min-width: 1200px) {
+  .section--work__list li {
+    font-size: 1.125rem;
+    /* 18px */
+  }
+}
+
 .section--work__a {
   font-size: 1rem;
   /* 16px */
@@ -5964,7 +6037,6 @@ body.body--mobile-nav-open {
 }
 
 .section--experience__list li {
-  list-style: none;
   font-family: "DM Sans", sans-serif;
   font-weight: 400;
   font-size: 1rem;
