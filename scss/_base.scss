@@ -341,6 +341,13 @@ a {
 	}
 }
 
+strong {
+	font-weight: 700;
+	color: #fff;
+	border-bottom: solid 1px #FFC947;
+	// border-bottom: solid 1px #185ADB;
+}
+
 /*
    * Remove text-shadow in selection highlight:
    * https://twitter.com/miketaylr/status/12228805301
