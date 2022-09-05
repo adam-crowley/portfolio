@@ -1,25 +1,27 @@
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
-// gsap.to(".header__title", {
-// 	duration: 0.2, autoAlpha: 1, ease: "linear",
-// 	scrollTrigger: {
-// 		trigger: ".section--about",
-// 		// markers: true,
-// 		start: "bottom 0%", //when top passes 75% viewport height
-// 		//events: onEnter onLeave onEnterBack onLeaveBack
-// 		toggleActions: "play none reverse none"
-// 		//options: play, pause, resume, reset, restart, complete, reverse,none
-// 	}
-// })
-
 //GSAP tweens
 let aboutTl = gsap.timeline();
 
 aboutTl
 	.fromTo('.section--about__name span:not(.sr-only)', { y: 15 }, { duration: 1, autoAlpha: 1, y: 0, ease: Power2.easeOut, stagger: 0.05 })
-	.fromTo('.section--about__title', { y: 10 }, { duration: 1, autoAlpha: 1, y: 0, ease: Power2.easeOut }, '-=1')
-	.fromTo('.section--about__border', { width: 0 }, { duration: 1.25, autoAlpha: 1, width: '100%', ease: Power2.easeOut }, '-=1.25')
-	.fromTo('.section--about__p', { y: 15 }, { duration: 1, autoAlpha: 1, y: 0, ease: Power2.easeOut, stagger: 0.1 }, '-=0.5');
+	.to('.section--about__title', { duration: 1, autoAlpha: 1, ease: Power2.easeOut }, '-=0.75')
+	.fromTo('.section--about__border', { width: 0 }, { duration: 1.25, autoAlpha: 1, width: '100%', ease: Power2.easeOut }, '-=1')
+	.fromTo('.section--about__p', { y: 15 }, { duration: 1, autoAlpha: 1, y: 0, ease: Power2.easeOut, stagger: 0.15 }, '-=0.75');
+
+// About parallax effect
+gsap.to(".section--about__text-container", {
+	yPercent: 50,
+	autoAlpha: 0.75,
+	ease: "none",
+	scrollTrigger: {
+		trigger: ".section--about",
+		markers: true,
+		start: "top 0%", //when top passes 75% viewport height
+		// end: "bottom 0%",
+		scrub: true
+	}
+})
   
 //navigation
 const body = document.querySelector('body');

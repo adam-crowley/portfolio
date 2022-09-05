@@ -201,6 +201,7 @@ body {
 .section--about {
 	background-color: #0A1931;
 	padding: 7rem 0 5rem;
+	overflow: hidden;
 	@media (min-width: 768px) {
 		padding: 15rem 0 12rem;
 	}
