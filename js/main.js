@@ -12,6 +12,15 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 // 	}
 // })
 
+//GSAP tweens
+let aboutTl = gsap.timeline();
+
+aboutTl
+	.fromTo('.section--about__name span:not(.sr-only)', { y: 15 }, { duration: 1, autoAlpha: 1, y: 0, ease: Power2.easeOut, stagger: 0.05 })
+	.fromTo('.section--about__title', { y: 10 }, { duration: 1, autoAlpha: 1, y: 0, ease: Power2.easeOut }, '-=1')
+	.fromTo('.section--about__border', { width: 0 }, { duration: 1.25, autoAlpha: 1, width: '100%', ease: Power2.easeOut }, '-=1.25')
+	.fromTo('.section--about__p', { y: 15 }, { duration: 1, autoAlpha: 1, y: 0, ease: Power2.easeOut, stagger: 0.1 }, '-=0.5');
+  
 //navigation
 const body = document.querySelector('body');
 const closeMobileNavIcon = document.querySelector('#close-mobile-nav-icon');

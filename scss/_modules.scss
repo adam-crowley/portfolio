@@ -218,10 +218,17 @@ body {
 	margin-bottom: 0.5rem;
 }
 
+.section--about__name span:not(.sr-only) {
+	opacity: 0;
+	display: inline-block;
+	// position: relative;
+}
+
 .section--about__title {
 	text-align: left;
 	font-size: 1.125rem; /* 18px */
-	opacity: 0.8;
+	opacity: 0;
+	color: rgba(255, 255, 255, 0.8);
 	text-transform: uppercase;
 	@media (min-width: 576px) {
 		font-size: 1.3125rem; /* 21px */
@@ -236,6 +243,7 @@ body {
 }
 
 .section--about__border {
+	opacity: 0;
 	height: 2px;
 	// background-color: #FFC947;
 	background-color: rgba(255, 255, 255, 0.6);
@@ -245,6 +253,7 @@ body {
 	}
 }	
 .section--about__p {
+	opacity: 0;
 	font-size: 1rem; /* 16px */
 	line-height: 1.6;
 	color: rgba(255, 255, 255, 0.8);
@@ -381,7 +390,7 @@ body {
 
 	.section--work__project-container {
 		@media (min-width: 992px) {
-			width: 100%;
+			max-width: 100%;
 		}
 	}
 
@@ -391,7 +400,7 @@ body {
 			margin-bottom: 0;
 		}
 		@media (min-width: 768px) {
-			margin-bottom: 8rem;
+			margin-bottom: 10rem;
 		}
 	}
 
@@ -592,7 +601,7 @@ body {
 	}
 	
 	.section--experience__co {
-		font-size: 1.3125rem; /* 21px */
+		font-size: 1.5rem; /* 24px */
 		font-weight: 700;
 		margin: 0 auto 0.3rem;
 	}
