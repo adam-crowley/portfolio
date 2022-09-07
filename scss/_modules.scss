@@ -199,9 +199,18 @@ body {
 	========================================================================== */
 
 .section--about {
+	position: relative;
 	background-color: #0A1931;
 	padding: 7rem 0 5rem;
 	overflow: hidden;
+	&::before {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		background: linear-gradient(180deg, rgba(24,90,219,0) 75%, rgba(24,90,219,0.25) 100%);
+	}
 	@media (min-width: 768px) {
 		padding: 15rem 0 12rem;
 	}
@@ -380,7 +389,13 @@ body {
 		color: #0A1931;
 	}
 
+	.section--work__header span {
+		opacity: 0;
+		display: inline-block;
+	}
+
 	.section--work__border {
+		opacity: 0;
 		height: 2px;
 		background-color: #FFC947;
 		margin-bottom: 2rem;
@@ -536,6 +551,7 @@ body {
 		font-family: 'DM Sans', sans-serif;
 		font-weight: 700;
 		margin: 0 auto;
+		display: inline-block;
 		&:hover {
 			color: #185ADB;
 		}
@@ -558,9 +574,17 @@ body {
 	========================================================================== */
 
 	.section--experience {
-		// background-color: #185ADB;
+		position: relative;
 		background-color: #0A1931;
 		padding: 5rem 0 2rem;
+		&::before {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			background: linear-gradient(0deg, rgba(24,90,219,0) 75%, rgba(24,90,219,0.25) 100%);
+		}
 		@media (min-width: 768px) {
 			// padding: 15rem 0 12rem;
 		}

@@ -1,27 +1,45 @@
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
-//GSAP tweens
-let aboutTl = gsap.timeline();
+//About section: Text animation
+let aboutTl = gsap.timeline()
+.fromTo('.section--about__name span:not(.sr-only)', { y: 15 }, { duration: 1, autoAlpha: 1, y: 0, ease: Power2.easeOut, stagger: 0.075 })
+.to('.section--about__title', { duration: 1, autoAlpha: 1, ease: Power2.easeOut }, '-=0.75')
+.fromTo('.section--about__border', { width: 0 }, { duration: 1.25, autoAlpha: 1, width: '100%', ease: Power2.easeOut }, '-=1')
+.fromTo('.section--about__p', { y: 15 }, { duration: 1, autoAlpha: 1, y: 0, ease: Power2.easeOut, stagger: 0.15 }, '-=0.75');
 
-aboutTl
-	.fromTo('.section--about__name span:not(.sr-only)', { y: 15 }, { duration: 1, autoAlpha: 1, y: 0, ease: Power2.easeOut, stagger: 0.05 })
-	.to('.section--about__title', { duration: 1, autoAlpha: 1, ease: Power2.easeOut }, '-=0.75')
-	.fromTo('.section--about__border', { width: 0 }, { duration: 1.25, autoAlpha: 1, width: '100%', ease: Power2.easeOut }, '-=1')
-	.fromTo('.section--about__p', { y: 15 }, { duration: 1, autoAlpha: 1, y: 0, ease: Power2.easeOut, stagger: 0.15 }, '-=0.75');
-
-// About parallax effect
-gsap.to(".section--about__text-container", {
+//About section: parallax effect
+gsap.to('.section--about__text-container', {
 	yPercent: 50,
-	autoAlpha: 0.75,
 	ease: "none",
 	scrollTrigger: {
-		trigger: ".section--about",
-		markers: true,
-		start: "top 0%", //when top passes 75% viewport height
-		// end: "bottom 0%",
+		trigger: '.section--about',
+		markers: false,
+		start: "top 0%",
 		scrub: true
 	}
 })
+
+//Work section: header tween animation
+let workTl = gsap.timeline({scrollTrigger: {
+	trigger: '.section--about',
+	start: "top 0%"
+}})
+.fromTo('.section--work__header span', { y: 15 }, { duration: 1, autoAlpha: 1, y: 0, ease: Power2.easeOut, stagger: 0.075 })
+.fromTo('.section--work__border', { width: 0 }, { duration: 1.25, autoAlpha: 1, width: '100%', ease: Power2.easeOut }, '-=1')
+
+//Work section: fade in text elements
+const fadeInElements = gsap.utils.toArray('.section--work__img-container, .section--work__h3, .section--work__title, .section--work__list, .section--work__a');
+fadeInElements.forEach(elem => {
+	gsap.from(elem, {
+		duration: 1,
+		y: 15,
+		autoAlpha: 0,
+		scrollTrigger: {
+			trigger: elem,
+			start: "top 90%"
+    	}
+  	})
+});
   
 //navigation
 const body = document.querySelector('body');
