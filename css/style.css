@@ -5829,6 +5829,7 @@ body.body--mobile-nav-open {
 }
 
 .section--work__img-container {
+  transform: perspective(1500px);
   position: relative;
   overflow: hidden;
   padding-bottom: 63%;
@@ -6017,6 +6018,11 @@ body.body--mobile-nav-open {
 
 .section--experience__container {
   position: relative;
+}
+
+.section--experience__header span {
+  opacity: 0;
+  display: inline-block;
 }
 
 .section--experience__border {

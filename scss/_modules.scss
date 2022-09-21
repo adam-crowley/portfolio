@@ -424,6 +424,8 @@ body {
 	}
 
 	.section--work__img-container {
+		// transform: perspective(1500px) rotateY(15deg);
+		transform: perspective(1500px);
 		position: relative;
 		overflow: hidden;
 		padding-bottom: 63%;
@@ -452,6 +454,7 @@ body {
 	}
 
 	.section--work__img {
+		// transform: perspective(1500px) rotateY(15deg);
 		position: absolute;
 		max-width: 100%;
 	}
@@ -602,6 +605,11 @@ body {
 		position: relative;
 	}
 	
+	.section--experience__header span {
+		opacity: 0;
+		display: inline-block;
+	}
+
 	.section--experience__border {
 		height: 2px;
 		background-color: rgba(255,255,255,0.6);

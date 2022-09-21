@@ -60,7 +60,7 @@ let aboutTl = gsap.timeline()
 .fromTo('.section--about__name span:not(.sr-only)', { y: 15 }, { duration: 1, autoAlpha: 1, y: 0, ease: Power2.easeOut, stagger: 0.075 })
 .to('.section--about__title', { duration: 1, autoAlpha: 1, ease: Power2.easeOut }, '-=0.75')
 .fromTo('.section--about__border', { width: 0 }, { duration: 1.25, autoAlpha: 1, width: '100%', ease: Power2.easeOut }, '-=1')
-.fromTo('.section--about__p', { y: 15 }, { duration: 1, autoAlpha: 1, y: 0, ease: Power2.easeOut, stagger: 0.15 }, '-=0.75');
+.fromTo('.section--about__p', { y: 15 }, { duration: 1, autoAlpha: 1, y: 0, ease: Power2.easeOut, stagger: 0.1 }, '-=1');
 
 //About section: parallax effect
 let mm = gsap.matchMedia();
@@ -79,7 +79,7 @@ mm.add("(min-width: 768px)", () => {
 
 });
 
-//Work section: header tween animation
+//Work section: header animation
 let workTl = gsap.timeline({scrollTrigger: {
 	trigger: '.section--about',
 	start: "top 0%"
@@ -88,7 +88,7 @@ let workTl = gsap.timeline({scrollTrigger: {
 .fromTo('.section--work__border', { width: 0 }, { duration: 1.25, autoAlpha: 1, width: '100%', ease: Power2.easeOut }, '-=1')
 
 //Work section: fade in text elements
-const fadeInElements = gsap.utils.toArray('.section--work__img-container, .section--work__h3, .section--work__title, .section--work__list, .section--work__a');
+const fadeInElements = gsap.utils.toArray('.section--work__h3, .section--work__title, .section--work__list, .section--work__a');
 fadeInElements.forEach(elem => {
 	gsap.from(elem, {
 		duration: 1,
@@ -100,3 +100,27 @@ fadeInElements.forEach(elem => {
     	}
   	})
 });
+
+//Work section: fade in image elements
+const fadeInImg = gsap.utils.toArray('.section--work__img-container');
+fadeInImg.forEach(elem => {
+	gsap.from(elem, {
+		duration: 1,
+		// autoAlpha: 0,
+		rotationY: '20deg',
+		scrollTrigger: {
+			// markers: true,
+			trigger: elem,
+			start: "top 75%"
+    	}
+  	})
+});
+
+//Experience section: header animation
+let expTl = gsap.timeline({scrollTrigger: {
+	// markers: true,
+	trigger: '.section--experience',
+	start: "top 75%"
+}})
+.fromTo('.section--experience__header span', { y: 15 }, { duration: 1, autoAlpha: 1, y: 0, ease: Power2.easeOut, stagger: 0.075 })
+.fromTo('.section--experience__border', { width: 0 }, { duration: 1.25, autoAlpha: 1, width: '100%', ease: Power2.easeOut }, '-=1')
