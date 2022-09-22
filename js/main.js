@@ -107,7 +107,7 @@ fadeInImg.forEach(elem => {
 	gsap.from(elem, {
 		duration: 1,
 		// autoAlpha: 0,
-		rotationY: '20deg',
+		rotationY: '15deg',
 		scrollTrigger: {
 			// markers: true,
 			trigger: elem,
