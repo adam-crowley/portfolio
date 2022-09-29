@@ -84,7 +84,7 @@ let workTl = gsap.timeline({scrollTrigger: {
 	trigger: '.section--about',
 	start: "top 0%"
 }})
-.fromTo('.section--work__header span', { y: 15 }, { duration: 1, autoAlpha: 1, y: 0, ease: Power2.easeOut, stagger: 0.075 })
+.fromTo('.section--work__header-group span', { y: 15 }, { duration: 1, autoAlpha: 1, y: 0, ease: Power2.easeOut, stagger: 0.075 })
 .fromTo('.section--work__border', { width: 0 }, { duration: 1.25, autoAlpha: 1, width: '100%', ease: Power2.easeOut }, '-=1')
 
 //Work section: fade in text elements
@@ -101,7 +101,7 @@ fadeInElements.forEach(elem => {
   	})
 });
 
-//Work section: fade in image elements
+//Work section: rotate in image elements
 const fadeInImg = gsap.utils.toArray('.section--work__img-container');
 fadeInImg.forEach(elem => {
 	gsap.from(elem, {
