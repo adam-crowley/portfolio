@@ -203,6 +203,7 @@ body {
 	background-color: #0A1931;
 	padding: 7rem 0 3rem;
 	overflow: hidden;
+  justify-content: center;
 	&::before {
 		content: "";
 		position: absolute;
@@ -211,15 +212,19 @@ body {
 		top: 0;
 		background: linear-gradient(180deg, rgba(24,90,219,0) 75%, rgba(24,90,219,0.5) 100%);
 	}
-	@media (min-width: 768px) {
-		padding: 10rem 0 7rem;
+  @media (min-width: 576px) {
+    height: 100vh;
+    padding-top: 50px 0 0;
 	}
-	@media (min-width: 992px) {
-		padding: 15rem 0 12rem;
-	}
-	@media (min-width: 1200px) {
-		padding: 18rem 0 15rem;
-	}
+	// @media (min-width: 768px) {
+	// 	padding: 10rem 0 7rem;
+	// }
+	// @media (min-width: 992px) {
+	// 	padding: 15rem 0 12rem;
+	// }
+	// @media (min-width: 1200px) {
+	// 	padding: 18rem 0 15rem;
+	// }
 }	 
 
 .section--about__name-container {
