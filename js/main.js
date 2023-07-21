@@ -120,7 +120,7 @@ let workTl = gsap
 
 //Work section: fade in text elements
 const fadeInElements = gsap.utils.toArray(
-  ".section--work__h3, .section--work__title, .section--work__list, .section--work__a"
+  ".section--work__h3, .section--work__title, .section--work__list, .section--work__a, .section--work__p"
 );
 fadeInElements.forEach((elem) => {
   gsap.from(elem, {

@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="en-nz">
 
 <head>
 	<meta charset="utf-8">
@@ -11,7 +11,7 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,700;1,400&family=Oleo+Script&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/style.css?v=6">
+	<link rel="stylesheet" href="css/style.css?v=7">
 
 </head>
 
@@ -33,7 +33,8 @@
 							<li class="header__nav-li"><a href="#work" class="header__mob-nav-link">Work</a></li>
 							<li class="header__nav-li"><a href="#experience" class="header__mob-nav-link">Experience</a></li>
 						</ul>
-						<button class="header__open-mobile-nav" id="open-mobile-nav">
+						<button value="Open mobile navigation" class="header__open-mobile-nav" id="open-mobile-nav">
+              <span class="sr-only">Open mobile navigation</span>
 							<svg class="header__open-mobile-nav-icon is-visible" id="open-mobile-nav-icon" width="24" height="20" viewBox="0 0 24 20">
 								<path class="header__open-mobile-nav-path" d="M24,4H0V0H24Zm0,4H0v4H24Zm0,8H0v4H24Z"/>
 							</svg>
@@ -61,7 +62,7 @@
 										<span>A</span><span>d</span><span>a</span><span>m</span> <span>C</span><span>r</span><span>o</span><span>w</span><span>l</span><span>e</span><span>y</span>
 									</span>
 								</h1>
-								<p class="section--about__title">Front End Developer</p>
+								<h2 class="section--about__title">Front End Developer</h2>
 							</div>
 							<div class="section--about__border"></div>
 							<div class="row">
@@ -99,22 +100,26 @@
 					<div class="col-11 col-md-12">
 						<div class="section--work__project">
 							<div class="row justify-content-center">
-								<div class="col-12 col-lg-7 col-xl-8">
+								<div class="col-12 col-lg-7">
 									<div class="section--work__img-container section--work__img-container--th">
 										<img src="img/th_02-min.png" alt="True Honey" class="section--work__img">
 										<img src="img/th_02-min_mob.png" alt="True Honey" class="section--work__img--mob">
 									</div>
 								</div>
-								<div class="col-12 col-md-10 col-lg-5 col-xl-4 section--work__text-container section--work__text-container--right">
+								<div class="col-12 col-md-10 col-lg-5 section--work__text-container section--work__text-container--right">
 									<div>
 										<h3 class="section--work__h3">True Honey</h3>
 										<p class="section--work__title">Shopify website</p>
-										<ul class="section--work__list">
-											<li>HTML/CSS build of custom Shopify theme.</li>
-											<li>Greensock animation for UI and graphics.</li>
-											<li>HTML Video.</li>
-											<li>Cin7 inventory management.</li>
+                    <ul class="section--work__list">
+											<li>HTML</li>
+                      <li>CSS</li>
+                      <li>JS</li>
+											<li>Greensock</li>
+											<li>HTML5 Video</li>
+											<li>Cin7</li>
 										</ul>
+                    <p class="section--work__p">This was a project I built while I worked at Federation Agency. I started with a blank Shopify theme template and customised it to display like the supplied design. I used the Greensock Animation Platform to implement the scroll based animations on all the pages.</p>
+                    <p class="section--work__p">This was my first time using the Shopify platform so I had to learn how to use Shopify's Liquid page templating system and CMS. I also learned how to integrate inventory management via Cin7.</p>
 										<a href="https://truehoney.co.nz/" target="_blank" class="section--work__a">View site ></a>
 									</div>
 								</div>
@@ -122,45 +127,53 @@
 						</div>
 						<div class="section--work__project">
 							<div class="row justify-content-center">
-								<div class="col-12 col-lg-7 col-xl-8 order-lg-2">
-									<div class="section--work__img-container section--work__img-container--sb">
-										<img src="img/sb_01-min.png" alt="Safer Boating" class="section--work__img">
-										<img src="img/sb_01-min_mob.png" alt="Safer Boating" class="section--work__img--mob">
+								<div class="col-12 col-lg-7 order-lg-2">
+									<div class="section--work__img-container section--work__img-container--fed">
+										<img src="img/fed_01-min.png" alt="Federation" class="section--work__img">
+										<img src="img/fed_01-min_mob.png" alt="Federation" class="section--work__img--mob">
 									</div>
 								</div>
-								<div class="col-12 col-md-10 col-lg-5 col-xl-4 section--work__text-container section--work__text-container--left">
+								<div class="col-12 col-md-10 col-lg-5 section--work__text-container section--work__text-container--left">
 									<div>
-										<h3 class="section--work__h3">Safer Boating</h3>
-										<p class="section--work__title">Landing page</p>
+										<h3 class="section--work__h3">Federation Agency</h3>
+										<p class="section--work__title">Microsite</p>
 										<ul class="section--work__list">
-											<li>HTML/CSS build of landing page.</li>
-											<li>Javascript for UI elements.</li>
-											<li>HTML Video.</li>
+											<li>HTML</li>
+											<li>CSS</li>
+                      <li>Greensock</li>
+                      <li>HTML5 Video</li>
+                      <li>YouTube Video API</li>
 										</ul>
-										<a href="https://saferboating.org.nz/" target="_blank" class="section--work__a">View site ></a>
+                    <p class="section--work__p">This was the company website I built while working at Federation agency. I built this website from scratch from the supplied design in HTML. I used the Greensock Animation Platform for scroll triggered animations, and utilised the YouTube API to control playback of video elements.</p>
+                    <p class="section--work__p">
+                      Building this site was the first time I implemented CSS Flexbox for layout, so that was good to get practice in. But looking back, I should have implemented a Content Management System for the News section.
+                    </p>
+										<a href="http://adamcrowley.co.nz/staging/federation/" target="_blank" class="section--work__a">View site ></a>
 									</div>
 								</div>
 							</div>
 						</div>
 						<div class="section--work__project">
 							<div class="row justify-content-center">
-								<div class="col-12 col-lg-7 col-xl-8">
-									<div class="section--work__img-container section--work__img-container--fed">
-										<img src="img/fed_01-min.png" alt="Federation" class="section--work__img">
-										<img src="img/fed_01-min_mob.png" alt="Federation" class="section--work__img--mob">
+								<div class="col-12 col-lg-7">
+                  <div class="section--work__img-container section--work__img-container--sb">
+										<img src="img/sb_01-min.png" alt="Safer Boating" class="section--work__img">
+										<img src="img/sb_01-min_mob.png" alt="Safer Boating" class="section--work__img--mob">
 									</div>
 								</div>
-								<div class="col-12 col-md-10 col-lg-5 col-xl-4 section--work__text-container section--work__text-container--right">
-									<div>
-										<h3 class="section--work__h3">Federation Agency</h3>
-										<p class="section--work__title">Microsite</p>
+								<div class="col-12 col-md-10 col-lg-5 section--work__text-container section--work__text-container--right">
+                  <div>
+										<h3 class="section--work__h3">Safer Boating</h3>
+										<p class="section--work__title">Landing page</p>
 										<ul class="section--work__list">
-											<li>HTML/CSS build of website.</li>
-											<li>Greensock animation for UI and graphics.</li>
-											<li>HTML and YouTube Video elements.</li>
-											<li>Javascript for UI elements.</li>
+											<li>HTML</li>
+                      <li>CSS</li>
+                      <li>JS</li>
+                      <li>HTML5 Video</li>
 										</ul>
-										<a href="http://adamcrowley.co.nz/staging/federation/" target="_blank" class="section--work__a">View site ></a>
+                    <p class="section--work__p">I built this landing page for Federation Agency while working as a freelancer. This is a HTML/CSS brochure page with HTML5 Video background and uses javascript for interactive elements like the mobile nav menu and accordian menu.</p>
+                    <p class="section--work__p">In this project I learned how to implement the Slick Slider JS plugin for the 5 Ways To Be Safe image slider which displays in mobile/tablet view.</p>
+										<a href="https://saferboating.org.nz/" target="_blank" class="section--work__a">View site ></a>
 									</div>
 								</div>
 							</div>
