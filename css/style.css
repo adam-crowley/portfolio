@@ -5670,7 +5670,7 @@ body.body--mobile-nav-open {
 }
 @media (min-width: 768px) {
   .section--about__border {
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
   }
 }
 
@@ -5689,12 +5689,13 @@ body.body--mobile-nav-open {
     /* 18px */
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .section--about__p {
-    font-size: 1.5rem;
-    /* 24px */
+    font-size: 1.3125rem;
+    /* 21px */
   }
 }
+
 .section--about__contact-list {
   text-align: left;
 }

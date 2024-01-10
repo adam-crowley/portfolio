@@ -85,7 +85,7 @@ let aboutTl = gsap
 
 //About section: parallax effect
 let mm = gsap.matchMedia();
-mm.add("(min-width: 768px)", () => {
+mm.add("(min-width: 1280px)", () => {
   gsap.to(".section--about__text-container", {
     yPercent: 50,
     ease: "none",
